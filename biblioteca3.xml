@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (documento*)>
+    <!ELEMENT documento (titulo?, numero?, indice, apartado+, sinopsis?)>
+    <!ATTLIST documento Id ID #REQUIRED>
+    <!ATTLIST documento tipo_clase (novela|infantil|didactico|informatica|corazon|coches|investigacion|otras|nacional|internacional) #REQUIRED>
+    <!ATTLIST documento num_pags NMTOKEN #IMPLIED>
+    <!ATTLIST documento fecha NMTOKEN #IMPLIED>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+    <!ELEMENT indice (#PCDATA)>
+    <!ELEMENT apartado ((titulo-apdo?|articulo+), contenido)>
+    <!ATTLIST apartado tipo_apdo (capitulo|seccion) #REQUIRED>
+    <!ATTLIST apartado num_pags_apdo NMTOKEN #IMPLIED>
+    <!ELEMENT titulo-apdo (#PCDATA)>
+    <!ELEMENT contenido EMPTY>
+    <!ATTLIST contenido info_contenido NMTOKEN #REQUIRED>
+    <!ATTLIST apartado num_pags_sec NMTOKEN #IMPLIED>
+    <!ATTLIST apartado tipo_seccion (economica|opinion|deportes|nacional|internacional) #IMPLIED>
+    <!ELEMENT articulo (#PCDATA)>
+    <!ATTLIST articulo autor NMTOKENS #REQUIRED>
+    <!ATTLIST contenido info_contenido CDATA #REQUIRED>
+    <!ELEMENT sinopsis (#PCDATA)>
+
+    <!ENTITY cap1_enlace_info SYSTEM "L1234/capitulo-1.html" NDATA html>
+    <!ENTITY cap2_enlace_info SYSTEM "L1234/capitulo-2.html" NDATA html>
+    <!ENTITY cap3_enlace_info SYSTEM "L1234/capitulo-3.html" NDATA html>
+    
+    <!ENTITY pruebas_info SYSTEM "R4567/pruebas_info.html" NDATA html>
+    <!ENTITY actualidad_info SYSTEM "R4567/actualidad_info.html" NDATA html>
+    
+    <!ENTITY articulo_1_info SYSTEM "P9876/articulo_1_info.html" NDATA html>
+    <!ENTITY articulo_2_info SYSTEM "P9876/articulo_2_info.html" NDATA html>
+
+    <!NOTATION html SYSTEM "documentos/html">
+]>
+<biblioteca>
+
+    <documento Id="L1234" tipo_clase="novela" num_pags="215">
+        <titulo>
+            Las andanzas de Carla, Carlos y Clara
+        </titulo>
+
+        <indice>
+            MiIndiceLibro
+        </indice>
+
+        <apartado tipo_apdo="capitulo" num_pags_apdo="30">
+            <titulo-apdo>
+                Tres primos y un destino
+            </titulo-apdo>
+            <contenido info_contenido="cap1_enlace_info"/>
+        </apartado>
+
+        <apartado tipo_apdo="capitulo" num_pags_apdo="35">
+            <titulo-apdo>
+                Tres primos y dos vecinos
+            </titulo-apdo>
+            <contenido info_contenido="cap2_enlace_info"/>
+        </apartado>
+
+        <apartado tipo_apdo="capitulo" num_pags_apdo="33">
+            <titulo-apdo>
+                Tres primos y tres bovinos
+            </titulo-apdo>
+            <contenido info_contenido="cap3_enlace_info"/>
+        </apartado>
+
+        <sinopsis>
+            Desventuras variadas
+        </sinopsis>
+
+    </documento>
+
+    <documento Id="R4567" tipo_clase="coches" num_pags="72">
+
+        <titulo>
+            Motor simphony
+        </titulo>
+
+        <numero>
+            1
+        </numero>
+
+        <indice>
+            MiIndiceRevista
+        </indice>
+
+        <apartado tipo_apdo="seccion" num_pags_apdo="12">
+            <titulo-apdo>
+                Pruebas
+            </titulo-apdo>
+            <contenido info_contenido="pruebas_info"/>
+        </apartado>
+
+        <apartado tipo_apdo="seccion" num_pags_apdo="4">
+            <titulo-apdo>
+                Actualidad
+            </titulo-apdo>
+            <contenido info_contenido="actualidad_info"/>
+        </apartado>        
+
+    </documento>
+
+    <documento Id="P9876" tipo_clase="nacional" fecha="2021-01-15">
+
+        <indice>
+            MiIndicePeriodico
+        </indice>
+
+        <apartado tipo_apdo="seccion" tipo_seccion="economica">
+            <articulo autor="Juntaletras Bocachancla">
+                1
+            </articulo>
+            <contenido info_contenido="articulo_1_info"/>
+        </apartado>
+
+        <apartado tipo_apdo="seccion"  tipo_seccion="deportes">
+            <articulo autor="Malmetido Zarandajo">
+                2
+            </articulo>
+            <contenido info_contenido="articulo_2_info"/>
+        </apartado>
+
+    </documento>
+
+</biblioteca>

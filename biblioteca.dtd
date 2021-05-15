@@ -1,0 +1,21 @@
+<!ELEMENT biblioteca (documento*)>
+<!ELEMENT documento (titulo?, numero?, indice, (capitulo+|seccion+), sinopsis?)>
+<!ATTLIST documento Id CDATA #REQUIRED>
+<!ATTLIST documento tipo_clase (novela|infantil|didactico|informatica|corazon|coches|investigacion|otras|nacional|internacional) #REQUIRED>
+<!ATTLIST documento num_pags NMTOKEN #IMPLIED>
+<!ATTLIST documento fecha NMTOKEN #IMPLIED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT indice (#PCDATA)>
+<!ELEMENT capitulo (titulo-capitulo, contenido)>
+<!ATTLIST capitulo num_pags_cap NMTOKEN #REQUIRED>
+<!ELEMENT titulo-capitulo (#PCDATA)>
+<!ELEMENT contenido EMPTY>
+<!ATTLIST contenido info_contenido NMTOKEN #REQUIRED>
+<!ELEMENT seccion ((titulo-capitulo+|articulo+), contenido)>
+<!ATTLIST seccion num_pags_sec NMTOKEN #IMPLIED>
+<!ATTLIST seccion tipo_seccion (economica|opinion|deportes|nacional|internacional) #IMPLIED>
+<!ELEMENT articulo (#PCDATA)>
+<!ATTLIST articulo autor NMTOKENS #REQUIRED>
+<!ATTLIST contenido info_contenido CDATA #REQUIRED>
+<!ELEMENT sinopsis (#PCDATA)>
