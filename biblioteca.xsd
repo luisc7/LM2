@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <annotation>
+        <documentation>
+            Esquema de la actividad 2 de LMySGI
+         </documentation>
+    </annotation>
+
+    <element name="biblioteca">
+        <complexType>
+            <sequence>
+                <element name="documento" minOccurs="0" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="titulo" minOccurs="0" type="string"/>
+                            <element name="numero" minOccurs="0">
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <minInclusive value="1" />
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="indice" minOccurs="0"  type="string"/>
+                            <element name="apartado" maxOccurs="unbounded">
+                                <complexType>
+                                    <sequence>
+                                        <element name="titulo-apdo" minOccurs="0">
+                                        </element>
+                                        <element name="articulo" minOccurs="0">
+                                            <complexType>
+                                                <simpleContent>
+                                                    <extension base="string">
+                                                        <attribute name="autor" type="string"/>
+                                                    </extension>
+                                                </simpleContent>
+                                            </complexType>
+                                        </element>
+                                        <element name="contenido">
+                                            <complexType>
+                                                <attribute name="info_contenido" use="required"/>
+                                            </complexType>
+                                        </element>
+                                    </sequence>
+                                    <attribute name="tipo_apdo" type="string" use="required"/>
+                                    <attribute name="num_pags_apdo" type="integer"/>
+                                    <attribute name="tipo_seccion" type="string"/>
+                                </complexType>
+                            </element>
+                            <element name="sinopsis" minOccurs="0" type="string"></element>
+                        </sequence>
+                        <attribute name="Id" type="string" use="required"></attribute>
+                        <attribute name="tipo_clase" type="string" use="required"></attribute>
+                        <attribute name="num_pags" type="integer"></attribute>
+                        <attribute name="fecha" type="date"></attribute>
+                    </complexType>
+                </element>
+            </sequence>
+
+        </complexType>
+    </element>
+</schema>

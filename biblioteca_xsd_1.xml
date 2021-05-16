@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation= "biblioteca.xsd">
+
+    <documento Id="L1234" tipo_clase="novela" num_pags="215">
+        <titulo>
+            Las andanzas de Carla, Carlos y Clara
+        </titulo>
+
+        <indice>
+            MiIndiceLibro
+        </indice>
+
+        <apartado tipo_apdo="capitulo" num_pags_apdo="30">
+            <titulo-apdo>
+                Tres primos y un destino
+            </titulo-apdo>
+            <contenido info_contenido="cap1_enlace_info"/>
+        </apartado>
+
+        <apartado tipo_apdo="capitulo" num_pags_apdo="35">
+            <titulo-apdo>
+                Tres primos y dos vecinos
+            </titulo-apdo>
+            <contenido info_contenido="cap2_enlace_info"/>
+        </apartado>
+
+        <apartado tipo_apdo="capitulo" num_pags_apdo="33">
+            <titulo-apdo>
+                Tres primos y tres bovinos
+            </titulo-apdo>
+            <contenido info_contenido="cap3_enlace_info"/>
+        </apartado>
+
+        <sinopsis>
+            Desventuras variadas
+        </sinopsis>
+
+    </documento>
+
+    <documento Id="R4567" tipo_clase="coches" num_pags="72">
+
+        <titulo>
+            Motor simphony
+        </titulo>
+
+        <numero>
+            1
+        </numero>
+
+        <indice>
+            MiIndiceRevista
+        </indice>
+
+        <apartado tipo_apdo="seccion" num_pags_apdo="12">
+            <titulo-apdo>
+                Pruebas
+            </titulo-apdo>
+            <contenido info_contenido="pruebas_info"/>
+        </apartado>
+
+        <apartado tipo_apdo="seccion" num_pags_apdo="4">
+            <titulo-apdo>
+                Actualidad
+            </titulo-apdo>
+            <contenido info_contenido="actualidad_info"/>
+        </apartado>        
+
+    </documento>
+
+    <documento Id="P9876" tipo_clase="nacional" fecha="2021-01-15">
+
+        <indice>
+            MiIndicePeriodico
+        </indice>
+
+        <apartado tipo_apdo="seccion" tipo_seccion="economica">
+            <articulo autor="Juntaletras Bocachancla">
+                Articulo 1 donde pongo a parir a to dios.
+            </articulo>
+            <contenido info_contenido="articulo_1_info"/>
+        </apartado>
+
+        <apartado tipo_apdo="seccion"  tipo_seccion="deportes">
+            <articulo autor="Malmetido Zarandajo">
+                Articulo 2 donde rajo sin remordimientos.
+            </articulo>
+            <contenido info_contenido="articulo_2_info"/>
+        </apartado>
+
+    </documento>
+
+</biblioteca>
