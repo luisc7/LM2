@@ -1,21 +1,29 @@
 <!ELEMENT biblioteca (documento*)>
-<!ELEMENT documento (titulo?, numero?, indice, (capitulo+|seccion+), sinopsis?)>
-<!ATTLIST documento Id CDATA #REQUIRED>
+<!ELEMENT documento (titulo?, numero?, indice, apartado+, sinopsis?)>
+<!ATTLIST documento Id ID #REQUIRED>
 <!ATTLIST documento tipo_clase (novela|infantil|didactico|informatica|corazon|coches|investigacion|otras|nacional|internacional) #REQUIRED>
 <!ATTLIST documento num_pags NMTOKEN #IMPLIED>
 <!ATTLIST documento fecha NMTOKEN #IMPLIED>
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT numero (#PCDATA)>
 <!ELEMENT indice (#PCDATA)>
-<!ELEMENT capitulo (titulo-capitulo, contenido)>
-<!ATTLIST capitulo num_pags_cap NMTOKEN #REQUIRED>
-<!ELEMENT titulo-capitulo (#PCDATA)>
+<!ELEMENT apartado ((titulo-apdo?|articulo+), contenido)>
+<!ATTLIST apartado tipo_apdo (capitulo|seccion) #REQUIRED>
+<!ATTLIST apartado num_pags_apdo NMTOKEN #IMPLIED>
+<!ELEMENT titulo-apdo (#PCDATA)>
 <!ELEMENT contenido EMPTY>
 <!ATTLIST contenido info_contenido NMTOKEN #REQUIRED>
-<!ELEMENT seccion ((titulo-capitulo+|articulo+), contenido)>
-<!ATTLIST seccion num_pags_sec NMTOKEN #IMPLIED>
-<!ATTLIST seccion tipo_seccion (economica|opinion|deportes|nacional|internacional) #IMPLIED>
+<!ATTLIST apartado num_pags_sec NMTOKEN #IMPLIED>
+<!ATTLIST apartado tipo_seccion (economica|opinion|deportes|nacional|internacional) #IMPLIED>
 <!ELEMENT articulo (#PCDATA)>
 <!ATTLIST articulo autor NMTOKENS #REQUIRED>
 <!ATTLIST contenido info_contenido CDATA #REQUIRED>
 <!ELEMENT sinopsis (#PCDATA)>
+<!ENTITY cap1_enlace_info SYSTEM "L1234/capitulo-1.html" NDATA html>
+<!ENTITY cap2_enlace_info SYSTEM "L1234/capitulo-2.html" NDATA html>
+<!ENTITY cap3_enlace_info SYSTEM "L1234/capitulo-3.html" NDATA html>
+<!ENTITY pruebas_info SYSTEM "R4567/pruebas_info.html" NDATA html>
+<!ENTITY actualidad_info SYSTEM "R4567/actualidad_info.html" NDATA html>
+<!ENTITY articulo_1_info SYSTEM "P9876/articulo_1_info.html" NDATA html>
+<!ENTITY articulo_2_info SYSTEM "P9876/articulo_2_info.html" NDATA html>
+<!NOTATION html SYSTEM "documentos/html">

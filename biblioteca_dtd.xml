@@ -11,26 +11,26 @@
             MiIndiceLibro
         </indice>
 
-        <capitulo num_pags_cap="30">
-            <titulo-capitulo>
+        <apartado tipo_apdo="capitulo" num_pags_apdo="30">
+            <titulo-apdo>
                 Tres primos y un destino
-            </titulo-capitulo>
+            </titulo-apdo>
             <contenido info_contenido="cap1_enlace_info"/>
-        </capitulo>
+        </apartado>
 
-        <capitulo num_pags_cap="35">
-            <titulo-capitulo>
+        <apartado tipo_apdo="capitulo" num_pags_apdo="35">
+            <titulo-apdo>
                 Tres primos y dos vecinos
-            </titulo-capitulo>
+            </titulo-apdo>
             <contenido info_contenido="cap2_enlace_info"/>
-        </capitulo>
+        </apartado>
 
-        <capitulo num_pags_cap="33">
-            <titulo-capitulo>
+        <apartado tipo_apdo="capitulo" num_pags_apdo="33">
+            <titulo-apdo>
                 Tres primos y tres bovinos
-            </titulo-capitulo>
+            </titulo-apdo>
             <contenido info_contenido="cap3_enlace_info"/>
-        </capitulo>
+        </apartado>
 
         <sinopsis>
             Desventuras variadas
@@ -52,19 +52,19 @@
             MiIndiceRevista
         </indice>
 
-        <seccion num_pags_sec="12">
-            <titulo-capitulo>
+        <apartado tipo_apdo="seccion" num_pags_apdo="12">
+            <titulo-apdo>
                 Pruebas
-            </titulo-capitulo>
+            </titulo-apdo>
             <contenido info_contenido="pruebas_info"/>
-        </seccion>
+        </apartado>
 
-        <seccion num_pags_sec="4">
-            <titulo-capitulo>
+        <apartado tipo_apdo="seccion" num_pags_apdo="4">
+            <titulo-apdo>
                 Actualidad
-            </titulo-capitulo>
+            </titulo-apdo>
             <contenido info_contenido="actualidad_info"/>
-        </seccion>        
+        </apartado>        
 
     </documento>
 
@@ -74,19 +74,19 @@
             MiIndicePeriodico
         </indice>
 
-        <seccion tipo_seccion="economica">
+        <apartado tipo_apdo="seccion" tipo_seccion="economica">
             <articulo autor="Juntaletras Bocachancla">
                 1
             </articulo>
-            <contenido info_contenido="articulo_1_eco"/>
-        </seccion>
+            <contenido info_contenido="articulo_1_info"/>
+        </apartado>
 
-        <seccion tipo_seccion="deportes">
+        <apartado tipo_apdo="seccion"  tipo_seccion="deportes">
             <articulo autor="Malmetido Zarandajo">
                 2
             </articulo>
             <contenido info_contenido="articulo_2_info"/>
-        </seccion>
+        </apartado>
 
     </documento>
 
