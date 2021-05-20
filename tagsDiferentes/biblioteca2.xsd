@@ -32,9 +32,6 @@
                                         </element>
                                         <element name="contenido-cap">
                                             <complexType>
-                                                <!--restriction base="string">
-                                                    <length value="0"/>
-                                                </restriction-->
                                                 <attribute name="info_contenido" type="string"/>
                                             </complexType>
                                         </element>
@@ -45,7 +42,15 @@
                             <element name="sinopsis"/>
                         </sequence>
                         <attribute name="Id" type="string" use="required"/>
-                        <attribute name="tipo_clase" type="string" use="required"/>
+                        <attribute name="tipo_clase" use="required">
+                            <simpleType>
+                                <restriction base="string">
+                                    <enumeration value="novela"/>
+                                    <enumeration value="infantil"/>
+                                    <enumeration value="didactico"/>
+                                </restriction>
+                            </simpleType>
+                        </attribute>
                         <attribute name="num_pags" type="integer" use="required"/>
                     </complexType>
                 </element>
@@ -53,7 +58,13 @@
                     <complexType>
                         <sequence>
                             <element name="titulo-revista" type="string"/>
-                            <element name="numero" type="integer"/>
+                            <element name="numero">
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <minInclusive value="1"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
                             <element name="indice-revista" type="string"/>
                             <element name="seccion-revista" maxOccurs="unbounded">
                                 <complexType>
@@ -70,7 +81,17 @@
                             </element>
                         </sequence>
                         <attribute name="Id" type="string" use="required"/>
-                        <attribute name="tipo_clase" type="string" use="required"/>
+                        <attribute name="tipo_clase" use="required">
+                            <simpleType>
+                                <restriction base="string">
+                                    <enumeration value="informatica"/>
+                                    <enumeration value="corazon"/>
+                                    <enumeration value="coches"/>
+                                    <enumeration value="investigacion"/>
+                                    <enumeration value="otras"/>
+                                </restriction>
+                            </simpleType>
+                        </attribute>
                         <attribute name="num_pags" type="string" use="required"/>
                     </complexType>
                 </element>
@@ -81,7 +102,19 @@
                             <element name="seccion-periodico" maxOccurs="unbounded">
                                 <complexType>
                                     <sequence>
-                                        <element name="articulo"/>
+                                        <element name="articulo">
+                                            <complexType>
+                                                <simpleContent>
+                                                    <extension base="string">
+                                                        <attribute name="autor" use="required">
+                                                            <simpleType>
+                                                                <restriction base="string"/>
+                                                            </simpleType>
+                                                        </attribute>
+                                                    </extension>
+                                               </simpleContent>
+                                            </complexType>
+                                        </element>
                                         <element name="contenido-arti"/>
                                     </sequence>
                                     <attribute name="tipo_seccion">
