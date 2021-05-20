@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="biblioteca2.xsd">
+
+    <libro Id="L1234" tipo_clase="novela" num_pags="215">
+        <titulo-libro>
+            Las andanzas de Carla, Carlos y Clara
+        </titulo-libro>
+
+        <indice-libro>
+            MiIndiceLibro
+        </indice-libro>
+
+        <capitulo-libro num_pags="30">
+            <titulo-cap>
+                Tres primos y un destino
+            </titulo-cap>
+            <contenido-cap info_contenido="L1234/capitulo-1.html" />
+        </capitulo-libro>
+
+        <capitulo-libro num_pags="35">
+            <titulo-cap>
+                Tres primos y dos vecinos
+            </titulo-cap>
+            <contenido-cap info_contenido="L1234/capitulo-2.html" />
+        </capitulo-libro>
+
+        <capitulo-libro num_pags="33">
+            <titulo-cap>
+            Tres primos y tres bovinos
+            </titulo-cap>
+            <contenido-cap info_contenido="L1234/capitulo-3.html" />
+        </capitulo-libro>
+
+        <sinopsis>
+            Desventuras variadas
+        </sinopsis>
+
+    </libro>
+
+    <revista Id="R4567" tipo_clase="coches" num_pags="72">
+
+        <titulo-revista>
+        Motor simphony
+        </titulo-revista>
+
+        <numero>
+            1
+        </numero>
+
+        <indice-revista>
+            MiIndiceRevista
+        </indice-revista>
+
+        <seccion-revista num_pags="12">
+            <titulo-secc>
+                Pruebas
+            </titulo-secc>
+            <contenido-secc info_contenido="R4567/pruebas_info.html" />
+        </seccion-revista>
+
+        <seccion-revista num_pags="4">
+            <titulo-secc>
+                Actualidad
+            </titulo-secc>
+            <contenido-secc info_contenido="R4567/actualidad_info.html" />
+        </seccion-revista>
+
+    </revista>
+
+    <periodico Id="P9876" tipo_clase="nacional" fecha="2021-01-15">
+
+        <indice-periodico>
+            MiIndicePeriodico
+        </indice-periodico>
+
+        <seccion-periodico tipo_seccion="economica">
+            <articulo autor="Juntaletras Bocachancla">
+                1
+            </articulo>
+            <contenido-arti info_contenido="P9876/articulo_1_info.html" />
+        </seccion-periodico>
+
+        <seccion-periodico tipo_seccion="deportes">
+            <articulo autor="Malmetido Zarandajo">
+                2
+            </articulo>
+            <contenido-arti info_contenido="P9876/articulo_2_info.html" />
+        </seccion-periodico>
+
+    </periodico>
+
+</biblioteca>

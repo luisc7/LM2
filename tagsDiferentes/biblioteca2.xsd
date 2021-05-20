@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+    <annotation>
+        <documentation>
+            Esquema de la actividad 2 de LMySGI
+        </documentation>
+    </annotation>
+
+    <element name="biblioteca">
+        <complexType>
+            <sequence>
+                <element name="libro">
+                    <complexType>
+                        <sequence>
+                            <element name="titulo-libro">
+                                
+                            </element>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element name="revista">
+                </element>
+                <element name="periodico">
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

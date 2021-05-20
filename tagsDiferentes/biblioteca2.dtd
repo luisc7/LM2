@@ -1,0 +1,36 @@
+<!ELEMENT biblioteca (libro|revista|periodico)*>
+<!ELEMENT libro (titulo-libro, indice-libro, capitulo-libro+, sinopsis)>
+<!ATTLIST libro Id ID #REQUIRED>
+<!ATTLIST libro tipo_clase (novela|infantil|didactico) #REQUIRED>
+<!ATTLIST libro num_pags NMTOKEN #REQUIRED>
+<!ELEMENT titulo-libro (#PCDATA)>
+<!ELEMENT indice-libro (#PCDATA)>
+<!ELEMENT capitulo-libro (titulo-cap, contenido-cap)>
+<!ATTLIST capitulo-libro num_pags NMTOKEN #REQUIRED>
+<!ELEMENT titulo-cap (#PCDATA)>
+<!ELEMENT contenido-cap EMPTY>
+<!ATTLIST contenido-cap info_contenido CDATA #REQUIRED>
+<!ELEMENT sinopsis (#PCDATA)>
+<!ELEMENT revista (titulo-revista, numero, indice-revista, seccion-revista+)>
+<!ATTLIST revista Id ID #REQUIRED>
+<!ATTLIST revista tipo_clase (informatica|corazon|coches|investigacion|otras) #REQUIRED>
+<!ATTLIST revista num_pags NMTOKEN #REQUIRED>
+<!ELEMENT titulo-revista (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT indice-revista (#PCDATA)>
+<!ELEMENT seccion-revista (titulo-secc, contenido-secc)>
+<!ATTLIST seccion-revista num_pags NMTOKEN #REQUIRED>
+<!ELEMENT titulo-secc (#PCDATA)>
+<!ELEMENT contenido-secc EMPTY>
+<!ATTLIST contenido-secc info_contenido CDATA #REQUIRED>
+<!ELEMENT periodico (indice-periodico, seccion-periodico+)>
+<!ATTLIST periodico Id ID #REQUIRED>
+<!ATTLIST periodico tipo_clase (nacional|internacional) #REQUIRED>
+<!ATTLIST periodico fecha NMTOKEN #REQUIRED>
+<!ELEMENT indice-periodico (#PCDATA)>
+<!ELEMENT seccion-periodico (articulo, contenido-arti)>
+<!ATTLIST seccion-periodico tipo_seccion (economica|opinion|deportes|nacional|internacional) #REQUIRED>
+<!ELEMENT articulo (#PCDATA)>
+<!ATTLIST articulo autor NMTOKENS #REQUIRED>
+<!ELEMENT contenido-arti EMPTY>
+<!ATTLIST contenido-arti info_contenido CDATA #REQUIRED>
